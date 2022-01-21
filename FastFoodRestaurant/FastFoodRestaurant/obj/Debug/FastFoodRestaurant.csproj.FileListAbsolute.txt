@@ -1,0 +1,10 @@
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\bin\Debug\FastFoodRestaurant.exe.config
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\bin\Debug\FastFoodRestaurant.exe
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\bin\Debug\FastFoodRestaurant.pdb
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\obj\Debug\FastFoodRestaurant.csproj.AssemblyReference.cache
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\obj\Debug\FastFoodRestaurant.Form1.resources
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\obj\Debug\FastFoodRestaurant.Properties.Resources.resources
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\obj\Debug\FastFoodRestaurant.csproj.GenerateResource.cache
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\obj\Debug\FastFoodRestaurant.csproj.CoreCompileInputs.cache
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\obj\Debug\FastFoodRestaurant.exe
+C:\Users\Mr Wil\Desktop\LaboTP\FastFoodRestaurant_C_Sharp\FastFoodRestaurant\FastFoodRestaurant\obj\Debug\FastFoodRestaurant.pdb
