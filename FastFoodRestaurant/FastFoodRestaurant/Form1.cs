@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FastFoodRestaurant
 {
-    public partial class Form1 : Form
+    public partial class FastFood : Form
     {
-        public Form1()
+        public FastFood()
         {
             InitializeComponent();
         }
@@ -215,9 +215,108 @@ namespace FastFoodRestaurant
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CloseBt_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //Déclaration des unités de prix des different boissons et repas
+        double friteup = 1500, saladeup = 1500, hamburgerup = 2000, pouletup = 3500, sandwichup = 1500, beignetup = 1000, pizzaup = 5000;
+        double cocaup = 1500, eauup = 500, theup = 1000, orangeup = 1000, glaceup = 1000, crepeup = 1000, chocolatup = 1000;
+
+        //Déclaration des variables des prix total des boissons et repas
+        double fritetp, saladetp, hamburgertp, poulettp, sandwichtp, beignettp, pizzatp;
+        double cocatp, eautp, thetp, orangetp, glacetp, crepetp, chocolattp;
+
+        double totalht = 0, taxe, totalttc;
+        private void RecetteTb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AjouterBt_Click(object sender, EventArgs e)
+        {
+            fritetp = friteup * Convert.ToDouble(FriteTb.Text);
+            saladetp = saladeup * Convert.ToDouble(SaladeTb.Text);
+            hamburgertp = hamburgerup * Convert.ToDouble(HamburgerTb.Text);
+            poulettp = pouletup * Convert.ToDouble(PouletTb.Text);
+            sandwichtp = sandwichup * Convert.ToDouble(SandwichTb.Text);
+            beignettp = beignetup * Convert.ToDouble(BeignetTb.Text);
+            pizzatp = pizzaup * Convert.ToDouble(PizzaTb.Text);
+
+            cocatp = cocaup * Convert.ToDouble(CocaTb.Text);
+            eautp = eauup * Convert.ToDouble(EauTb.Text);
+            thetp = theup * Convert.ToDouble(TheTb.Text);
+            orangetp = orangeup * Convert.ToDouble(OrangeTb.Text);
+            glacetp = glaceup * Convert.ToDouble(GlaceTb.Text);
+            crepetp = crepeup * Convert.ToDouble(CrepeTb.Text);
+            chocolattp = chocolatup * Convert.ToDouble(ChocolatTb.Text);
+
+            //Maintenant on ajoute la commde au tableau
+            RecetteTb.Clear();
+            RecetteTb.AppendText(Environment.NewLine);
+            RecetteTb.AppendText("\t\t\t\t RESTAURANT DU CAMPUS" + Environment.NewLine);
+            RecetteTb.AppendText("\t\t\t ************************************  " + Environment.NewLine);
+
+            if(FriteCb.Checked == true)
+            {
+                RecetteTb.AppendText("\tFrite (x"+FriteTb.Text+") : \t"+fritetp+"Frs"+Environment.NewLine);
+                totalht += fritetp;
+                TotalHTlbl.Text = "" + totalht;
+            }
+            if (HamburgerCb.Checked == true)
+            {
+                
+            }
+            if (SaladeCb.Checked == true)
+            {
+                
+            }
+            if (PouletCb.Checked == true)
+            {
+                
+            }
+            if (SandwichCb.Checked == true)
+            {
+                
+            }
+            if (BeignetCb.Checked == true)
+            {
+                
+            }
+            if (PizzaCb.Checked == true)
+            {
+                
+            }
+            if (TheCb.Checked == true)
+            {
+                
+            }
+            if (CocaCb.Checked == true)
+            {
+                
+            }
+            if (GlaceCb.Checked == true)
+            {
+                
+            }
+            if (EauCb.Checked == true)
+            {
+                
+            }
+            if (ChocolatCb.Checked == true)
+            {
+                
+            }
+            if (OrangeCb.Checked == true)
+            {
+               
+            }
+            if (CrepeCb.Checked == true)
+            {
+                
+            }
+            
         }
     }
 }

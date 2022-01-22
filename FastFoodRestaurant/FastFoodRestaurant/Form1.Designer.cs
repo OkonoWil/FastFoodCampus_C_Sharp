@@ -1,7 +1,7 @@
 ﻿
 namespace FastFoodRestaurant
 {
-    partial class Form1
+    partial class FastFood
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -30,7 +30,9 @@ namespace FastFoodRestaurant
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FastFood));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CloseBt = new System.Windows.Forms.Button();
             this.Datelbl = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -101,16 +103,16 @@ namespace FastFoodRestaurant
             this.label18 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
+            this.ReinitialiserBt = new System.Windows.Forms.Button();
+            this.ImprimerBt = new System.Windows.Forms.Button();
+            this.AjouterBt = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.TotalTTClbl = new System.Windows.Forms.Label();
+            this.Taxelbl = new System.Windows.Forms.Label();
+            this.TotalHTlbl = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.AjouterBt = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.ImprimerBt = new System.Windows.Forms.Button();
-            this.ReinitialiserBt = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.RecetteTb = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -136,6 +138,7 @@ namespace FastFoodRestaurant
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.Controls.Add(this.CloseBt);
             this.panel1.Controls.Add(this.Datelbl);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -147,12 +150,31 @@ namespace FastFoodRestaurant
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // CloseBt
+            // 
+            this.CloseBt.AutoSize = true;
+            this.CloseBt.BackColor = System.Drawing.Color.Red;
+            this.CloseBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseBt.FlatAppearance.BorderSize = 0;
+            this.CloseBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseBt.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseBt.ForeColor = System.Drawing.Color.Yellow;
+            this.CloseBt.Location = new System.Drawing.Point(1121, 9);
+            this.CloseBt.Margin = new System.Windows.Forms.Padding(0);
+            this.CloseBt.Name = "CloseBt";
+            this.CloseBt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CloseBt.Size = new System.Drawing.Size(30, 33);
+            this.CloseBt.TabIndex = 6;
+            this.CloseBt.Text = "X";
+            this.CloseBt.UseVisualStyleBackColor = false;
+            this.CloseBt.Click += new System.EventHandler(this.CloseBt_Click);
+            // 
             // Datelbl
             // 
             this.Datelbl.AutoSize = true;
             this.Datelbl.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Datelbl.ForeColor = System.Drawing.Color.Yellow;
-            this.Datelbl.Location = new System.Drawing.Point(805, 46);
+            this.Datelbl.Location = new System.Drawing.Point(877, 46);
             this.Datelbl.Name = "Datelbl";
             this.Datelbl.Size = new System.Drawing.Size(180, 26);
             this.Datelbl.TabIndex = 0;
@@ -184,7 +206,7 @@ namespace FastFoodRestaurant
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(312, 20);
+            this.label1.Location = new System.Drawing.Point(394, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(395, 36);
             this.label1.TabIndex = 0;
@@ -926,15 +948,61 @@ namespace FastFoodRestaurant
             this.panel7.Controls.Add(this.AjouterBt);
             this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.label21);
-            this.panel7.Controls.Add(this.label25);
-            this.panel7.Controls.Add(this.label24);
-            this.panel7.Controls.Add(this.label23);
+            this.panel7.Controls.Add(this.TotalTTClbl);
+            this.panel7.Controls.Add(this.Taxelbl);
+            this.panel7.Controls.Add(this.TotalHTlbl);
             this.panel7.Controls.Add(this.label20);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(295, 516);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(572, 116);
             this.panel7.TabIndex = 4;
+            // 
+            // ReinitialiserBt
+            // 
+            this.ReinitialiserBt.BackColor = System.Drawing.Color.Gold;
+            this.ReinitialiserBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReinitialiserBt.FlatAppearance.BorderSize = 0;
+            this.ReinitialiserBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReinitialiserBt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReinitialiserBt.ForeColor = System.Drawing.Color.Red;
+            this.ReinitialiserBt.Location = new System.Drawing.Point(10, 68);
+            this.ReinitialiserBt.Name = "ReinitialiserBt";
+            this.ReinitialiserBt.Size = new System.Drawing.Size(170, 36);
+            this.ReinitialiserBt.TabIndex = 7;
+            this.ReinitialiserBt.Text = "RÉINITIALISER";
+            this.ReinitialiserBt.UseVisualStyleBackColor = false;
+            // 
+            // ImprimerBt
+            // 
+            this.ImprimerBt.BackColor = System.Drawing.Color.Gold;
+            this.ImprimerBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ImprimerBt.FlatAppearance.BorderSize = 0;
+            this.ImprimerBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImprimerBt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImprimerBt.ForeColor = System.Drawing.Color.Red;
+            this.ImprimerBt.Location = new System.Drawing.Point(392, 68);
+            this.ImprimerBt.Name = "ImprimerBt";
+            this.ImprimerBt.Size = new System.Drawing.Size(170, 36);
+            this.ImprimerBt.TabIndex = 7;
+            this.ImprimerBt.Text = "IMPRIMER";
+            this.ImprimerBt.UseVisualStyleBackColor = false;
+            // 
+            // AjouterBt
+            // 
+            this.AjouterBt.BackColor = System.Drawing.Color.Gold;
+            this.AjouterBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AjouterBt.FlatAppearance.BorderSize = 0;
+            this.AjouterBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AjouterBt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AjouterBt.ForeColor = System.Drawing.Color.Red;
+            this.AjouterBt.Location = new System.Drawing.Point(202, 68);
+            this.AjouterBt.Name = "AjouterBt";
+            this.AjouterBt.Size = new System.Drawing.Size(170, 36);
+            this.AjouterBt.TabIndex = 7;
+            this.AjouterBt.Text = "AJOUTER";
+            this.AjouterBt.UseVisualStyleBackColor = false;
+            this.AjouterBt.Click += new System.EventHandler(this.AjouterBt_Click);
             // 
             // label22
             // 
@@ -958,6 +1026,42 @@ namespace FastFoodRestaurant
             this.label21.TabIndex = 6;
             this.label21.Text = "Taxe :";
             // 
+            // TotalTTClbl
+            // 
+            this.TotalTTClbl.AutoSize = true;
+            this.TotalTTClbl.BackColor = System.Drawing.Color.White;
+            this.TotalTTClbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTTClbl.ForeColor = System.Drawing.Color.Black;
+            this.TotalTTClbl.Location = new System.Drawing.Point(439, 18);
+            this.TotalTTClbl.Name = "TotalTTClbl";
+            this.TotalTTClbl.Size = new System.Drawing.Size(46, 19);
+            this.TotalTTClbl.TabIndex = 6;
+            this.TotalTTClbl.Text = "---Frs";
+            // 
+            // Taxelbl
+            // 
+            this.Taxelbl.AutoSize = true;
+            this.Taxelbl.BackColor = System.Drawing.Color.White;
+            this.Taxelbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Taxelbl.ForeColor = System.Drawing.Color.Black;
+            this.Taxelbl.Location = new System.Drawing.Point(260, 18);
+            this.Taxelbl.Name = "Taxelbl";
+            this.Taxelbl.Size = new System.Drawing.Size(46, 19);
+            this.Taxelbl.TabIndex = 6;
+            this.Taxelbl.Text = "---Frs";
+            // 
+            // TotalHTlbl
+            // 
+            this.TotalHTlbl.AutoSize = true;
+            this.TotalHTlbl.BackColor = System.Drawing.Color.White;
+            this.TotalHTlbl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalHTlbl.ForeColor = System.Drawing.Color.Black;
+            this.TotalHTlbl.Location = new System.Drawing.Point(81, 18);
+            this.TotalHTlbl.Name = "TotalHTlbl";
+            this.TotalHTlbl.Size = new System.Drawing.Size(46, 19);
+            this.TotalHTlbl.TabIndex = 6;
+            this.TotalHTlbl.Text = "---Frs";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -969,102 +1073,31 @@ namespace FastFoodRestaurant
             this.label20.TabIndex = 6;
             this.label20.Text = "Total HT :";
             // 
-            // AjouterBt
+            // RecetteTb
             // 
-            this.AjouterBt.BackColor = System.Drawing.Color.Gold;
-            this.AjouterBt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AjouterBt.ForeColor = System.Drawing.Color.Red;
-            this.AjouterBt.Location = new System.Drawing.Point(202, 68);
-            this.AjouterBt.Name = "AjouterBt";
-            this.AjouterBt.Size = new System.Drawing.Size(170, 36);
-            this.AjouterBt.TabIndex = 7;
-            this.AjouterBt.Text = "AJOUTER";
-            this.AjouterBt.UseVisualStyleBackColor = false;
-            this.AjouterBt.Click += new System.EventHandler(this.button1_Click);
+            this.RecetteTb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RecetteTb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecetteTb.Location = new System.Drawing.Point(295, 146);
+            this.RecetteTb.Name = "RecetteTb";
+            this.RecetteTb.Size = new System.Drawing.Size(572, 368);
+            this.RecetteTb.TabIndex = 5;
+            this.RecetteTb.Text = "";
+            this.RecetteTb.TextChanged += new System.EventHandler(this.RecetteTb_TextChanged);
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.White;
-            this.label23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(81, 18);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(46, 19);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "---Frs";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.White;
-            this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(260, 18);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(46, 19);
-            this.label24.TabIndex = 6;
-            this.label24.Text = "---Frs";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.White;
-            this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(439, 18);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(46, 19);
-            this.label25.TabIndex = 6;
-            this.label25.Text = "---Frs";
-            // 
-            // ImprimerBt
-            // 
-            this.ImprimerBt.BackColor = System.Drawing.Color.Gold;
-            this.ImprimerBt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImprimerBt.ForeColor = System.Drawing.Color.Red;
-            this.ImprimerBt.Location = new System.Drawing.Point(392, 68);
-            this.ImprimerBt.Name = "ImprimerBt";
-            this.ImprimerBt.Size = new System.Drawing.Size(170, 36);
-            this.ImprimerBt.TabIndex = 7;
-            this.ImprimerBt.Text = "IMPRIMER";
-            this.ImprimerBt.UseVisualStyleBackColor = false;
-            this.ImprimerBt.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ReinitialiserBt
-            // 
-            this.ReinitialiserBt.BackColor = System.Drawing.Color.Gold;
-            this.ReinitialiserBt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReinitialiserBt.ForeColor = System.Drawing.Color.Red;
-            this.ReinitialiserBt.Location = new System.Drawing.Point(10, 68);
-            this.ReinitialiserBt.Name = "ReinitialiserBt";
-            this.ReinitialiserBt.Size = new System.Drawing.Size(170, 36);
-            this.ReinitialiserBt.TabIndex = 7;
-            this.ReinitialiserBt.Text = "RÉINITIALISER";
-            this.ReinitialiserBt.UseVisualStyleBackColor = false;
-            this.ReinitialiserBt.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(295, 146);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(572, 368);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
-            // 
-            // Form1
+            // FastFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 632);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.RecetteTb);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FastFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "0";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1174,12 +1207,13 @@ namespace FastFoodRestaurant
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button AjouterBt;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label TotalTTClbl;
+        private System.Windows.Forms.Label Taxelbl;
+        private System.Windows.Forms.Label TotalHTlbl;
         private System.Windows.Forms.Button ReinitialiserBt;
         private System.Windows.Forms.Button ImprimerBt;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox RecetteTb;
+        private System.Windows.Forms.Button CloseBt;
     }
 }
 
