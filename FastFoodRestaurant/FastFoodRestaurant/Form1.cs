@@ -222,6 +222,25 @@ namespace FastFoodRestaurant
 
         //Déclaration des unités de prix des different boissons et repas
         double friteup = 1500, saladeup = 1500, hamburgerup = 2000, pouletup = 3500, sandwichup = 1500, beignetup = 1000, pizzaup = 5000;
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(RecetteTb.Text + "Total HT : " + TotalHTlbl.Text + "    Taxe : " + Taxelbl.Text + "    Total TTC : " + TotalTTClbl.Text, new Font("Times New Roman", 12, FontStyle.Regular), Brushes.Blue, new Point(130));
+        }
+
+        private void ImprimerBt_Click(object sender, EventArgs e)
+        {
+            if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
         double cocaup = 1500, eauup = 500, theup = 1000, orangeup = 1000, glaceup = 1000, crepeup = 1000, chocolatup = 1000;
 
         //Déclaration des variables des prix total des boissons et repas
@@ -229,9 +248,31 @@ namespace FastFoodRestaurant
         double cocatp, eautp, thetp, orangetp, glacetp, crepetp, chocolattp;
 
         double totalht = 0, taxe, totalttc;
-        private void RecetteTb_TextChanged(object sender, EventArgs e)
-        {
 
+
+
+        private void ReinitialiserBt_Click(object sender, EventArgs e)
+        {
+            RecetteTb.Clear();
+            NumTabTb.Text = "";
+            TotalHTlbl.Text = "---Frs";
+            Taxelbl.Text = "---Frs";
+            TotalTTClbl.Text = "---Frs";
+
+            FriteCb.Checked = false;
+            HamburgerCb.Checked = false;
+            SaladeCb.Checked = false;
+            PouletCb.Checked = false;
+            SandwichCb.Checked = false;
+            BeignetCb.Checked = false;
+            PizzaCb.Checked = false;
+            TheCb.Checked = false;
+            CocaCb.Checked = false;
+            GlaceCb.Checked = false;
+            EauCb.Checked = false;
+            ChocolatCb.Checked = false;
+            OrangeCb.Checked = false;
+            CrepeCb.Checked = false;
         }
 
         private void AjouterBt_Click(object sender, EventArgs e)
@@ -257,65 +298,114 @@ namespace FastFoodRestaurant
             RecetteTb.AppendText(Environment.NewLine);
             RecetteTb.AppendText("\t\t\t\t RESTAURANT DU CAMPUS" + Environment.NewLine);
             RecetteTb.AppendText("\t\t\t ************************************  " + Environment.NewLine);
+            RecetteTb.AppendText("\tN° table :  "+NumTabTb.Text+"\t\t\t Date et Heure : "+ DateTime.Now + Environment.NewLine);
+
+            //Compteur
+            int i = 1;
 
             if(FriteCb.Checked == true)
             {
-                RecetteTb.AppendText("\tFrite (x"+FriteTb.Text+") : \t"+fritetp+"Frs"+Environment.NewLine);
+                RecetteTb.AppendText("\t"+i+"-\tFrite (x"+FriteTb.Text+") : \t\t"+fritetp+"Frs"+Environment.NewLine);
                 totalht += fritetp;
-                TotalHTlbl.Text = "" + totalht;
+                TotalHTlbl.Text = "" + totalht+"Frs";
+                i++;
             }
             if (HamburgerCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tHamburger (x" + HamburgerTb.Text + ") : \t" + hamburgertp + "Frs" + Environment.NewLine);
+                totalht += hamburgertp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (SaladeCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tSalade (x" + SaladeTb.Text + ") : \t\t" + saladetp + "Frs" + Environment.NewLine);
+                totalht += saladetp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (PouletCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tPoulet (x" + PouletTb.Text + ") : \t\t" + poulettp + "Frs" + Environment.NewLine);
+                totalht += poulettp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (SandwichCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tSandwich (x" + SandwichTb.Text + ") : \t" + sandwichtp + "Frs" + Environment.NewLine);
+                totalht += sandwichtp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (BeignetCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tBeignet (x" + BeignetTb.Text + ") : \t\t" + beignettp + "Frs" + Environment.NewLine);
+                totalht += beignettp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (PizzaCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tPizza (x" + PizzaTb.Text + ") : \t\t" + pizzatp + "Frs" + Environment.NewLine);
+                totalht += pizzatp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (TheCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tThe (x" + TheTb.Text + ") : \t\t" + thetp + "Frs" + Environment.NewLine);
+                totalht += thetp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (CocaCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tCoca-Cola (x" + CocaTb.Text + ") : \t" + cocatp + "Frs" + Environment.NewLine);
+                totalht += cocatp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (GlaceCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tGrème Glacée (x" + GlaceTb.Text + ") : \t" + glacetp + "Frs" + Environment.NewLine);
+                totalht += glacetp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (EauCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tEau (x" + EauTb.Text + ") : \t\t" + eautp + "Frs" + Environment.NewLine);
+                totalht += eautp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (ChocolatCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tChocolat (x" + ChocolatTb.Text + ") : \t" + chocolattp + "Frs" + Environment.NewLine);
+                totalht += chocolattp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (OrangeCb.Checked == true)
             {
-               
+                RecetteTb.AppendText("\t" + i + "-\tOrange (x" + OrangeTb.Text + ") : \t\t" + orangetp + "Frs" + Environment.NewLine);
+                totalht += orangetp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
             if (CrepeCb.Checked == true)
             {
-                
+                RecetteTb.AppendText("\t" + i + "-\tCrêpe (x" + CrepeTb.Text + ") : \t\t" + crepetp + "Frs" + Environment.NewLine);
+                totalht += crepetp;
+                TotalHTlbl.Text = "" + totalht + "Frs";
+                i++;
             }
+
+            taxe = totalht * 0.1925;
+            Taxelbl.Text = "" + taxe + "Frs";
+            totalttc = totalht + taxe;
+            TotalTTClbl.Text = "" + totalttc + "Frs";
             
         }
     }

@@ -113,6 +113,10 @@ namespace FastFoodRestaurant
             this.TotalHTlbl = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.RecetteTb = new System.Windows.Forms.RichTextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.NumTabTb = new System.Windows.Forms.TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -214,6 +218,8 @@ namespace FastFoodRestaurant
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.NumTabTb);
+            this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.PizzaTb);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.BeignetTb);
@@ -254,7 +260,7 @@ namespace FastFoodRestaurant
             // 
             this.PizzaTb.Enabled = false;
             this.PizzaTb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PizzaTb.Location = new System.Drawing.Point(216, 455);
+            this.PizzaTb.Location = new System.Drawing.Point(217, 495);
             this.PizzaTb.Name = "PizzaTb";
             this.PizzaTb.Size = new System.Drawing.Size(59, 32);
             this.PizzaTb.TabIndex = 7;
@@ -266,7 +272,7 @@ namespace FastFoodRestaurant
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(108, 455);
+            this.label10.Location = new System.Drawing.Point(109, 495);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 22);
             this.label10.TabIndex = 6;
@@ -276,7 +282,7 @@ namespace FastFoodRestaurant
             // 
             this.BeignetTb.Enabled = false;
             this.BeignetTb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeignetTb.Location = new System.Drawing.Point(216, 384);
+            this.BeignetTb.Location = new System.Drawing.Point(217, 424);
             this.BeignetTb.Name = "BeignetTb";
             this.BeignetTb.Size = new System.Drawing.Size(59, 32);
             this.BeignetTb.TabIndex = 7;
@@ -288,7 +294,7 @@ namespace FastFoodRestaurant
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(108, 384);
+            this.label9.Location = new System.Drawing.Point(109, 424);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 22);
             this.label9.TabIndex = 6;
@@ -298,7 +304,7 @@ namespace FastFoodRestaurant
             // 
             this.SandwichTb.Enabled = false;
             this.SandwichTb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SandwichTb.Location = new System.Drawing.Point(216, 319);
+            this.SandwichTb.Location = new System.Drawing.Point(217, 359);
             this.SandwichTb.Name = "SandwichTb";
             this.SandwichTb.Size = new System.Drawing.Size(59, 32);
             this.SandwichTb.TabIndex = 7;
@@ -310,7 +316,7 @@ namespace FastFoodRestaurant
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(108, 319);
+            this.label8.Location = new System.Drawing.Point(109, 359);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 22);
             this.label8.TabIndex = 6;
@@ -320,7 +326,7 @@ namespace FastFoodRestaurant
             // 
             this.PouletTb.Enabled = false;
             this.PouletTb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PouletTb.Location = new System.Drawing.Point(216, 253);
+            this.PouletTb.Location = new System.Drawing.Point(217, 293);
             this.PouletTb.Name = "PouletTb";
             this.PouletTb.Size = new System.Drawing.Size(59, 32);
             this.PouletTb.TabIndex = 7;
@@ -332,7 +338,7 @@ namespace FastFoodRestaurant
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(108, 253);
+            this.label7.Location = new System.Drawing.Point(109, 293);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 22);
             this.label7.TabIndex = 6;
@@ -341,7 +347,7 @@ namespace FastFoodRestaurant
             // pictureBox9
             // 
             this.pictureBox9.Image = global::FastFoodRestaurant.Properties.Resources.pizza2;
-            this.pictureBox9.Location = new System.Drawing.Point(48, 452);
+            this.pictureBox9.Location = new System.Drawing.Point(49, 492);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(44, 34);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +358,7 @@ namespace FastFoodRestaurant
             // 
             this.SaladeTb.Enabled = false;
             this.SaladeTb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaladeTb.Location = new System.Drawing.Point(216, 191);
+            this.SaladeTb.Location = new System.Drawing.Point(217, 231);
             this.SaladeTb.Name = "SaladeTb";
             this.SaladeTb.Size = new System.Drawing.Size(59, 32);
             this.SaladeTb.TabIndex = 7;
@@ -362,7 +368,7 @@ namespace FastFoodRestaurant
             // pictureBox8
             // 
             this.pictureBox8.Image = global::FastFoodRestaurant.Properties.Resources.doughnut;
-            this.pictureBox8.Location = new System.Drawing.Point(48, 381);
+            this.pictureBox8.Location = new System.Drawing.Point(49, 421);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(44, 34);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -374,7 +380,7 @@ namespace FastFoodRestaurant
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(108, 191);
+            this.label6.Location = new System.Drawing.Point(109, 231);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 22);
             this.label6.TabIndex = 6;
@@ -383,7 +389,7 @@ namespace FastFoodRestaurant
             // pictureBox7
             // 
             this.pictureBox7.Image = global::FastFoodRestaurant.Properties.Resources.sandwich1;
-            this.pictureBox7.Location = new System.Drawing.Point(48, 316);
+            this.pictureBox7.Location = new System.Drawing.Point(49, 356);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(44, 34);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -394,7 +400,7 @@ namespace FastFoodRestaurant
             // 
             this.HamburgerTb.Enabled = false;
             this.HamburgerTb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HamburgerTb.Location = new System.Drawing.Point(216, 133);
+            this.HamburgerTb.Location = new System.Drawing.Point(217, 173);
             this.HamburgerTb.Name = "HamburgerTb";
             this.HamburgerTb.Size = new System.Drawing.Size(59, 32);
             this.HamburgerTb.TabIndex = 7;
@@ -404,7 +410,7 @@ namespace FastFoodRestaurant
             // pictureBox6
             // 
             this.pictureBox6.Image = global::FastFoodRestaurant.Properties.Resources.poultry1;
-            this.pictureBox6.Location = new System.Drawing.Point(48, 250);
+            this.pictureBox6.Location = new System.Drawing.Point(49, 290);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(44, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -414,7 +420,7 @@ namespace FastFoodRestaurant
             // PizzaCb
             // 
             this.PizzaCb.AutoSize = true;
-            this.PizzaCb.Location = new System.Drawing.Point(27, 463);
+            this.PizzaCb.Location = new System.Drawing.Point(28, 503);
             this.PizzaCb.Name = "PizzaCb";
             this.PizzaCb.Size = new System.Drawing.Size(15, 14);
             this.PizzaCb.TabIndex = 4;
@@ -426,7 +432,7 @@ namespace FastFoodRestaurant
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(108, 133);
+            this.label5.Location = new System.Drawing.Point(109, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 22);
             this.label5.TabIndex = 6;
@@ -435,7 +441,7 @@ namespace FastFoodRestaurant
             // BeignetCb
             // 
             this.BeignetCb.AutoSize = true;
-            this.BeignetCb.Location = new System.Drawing.Point(27, 392);
+            this.BeignetCb.Location = new System.Drawing.Point(28, 432);
             this.BeignetCb.Name = "BeignetCb";
             this.BeignetCb.Size = new System.Drawing.Size(15, 14);
             this.BeignetCb.TabIndex = 4;
@@ -445,7 +451,7 @@ namespace FastFoodRestaurant
             // pictureBox5
             // 
             this.pictureBox5.Image = global::FastFoodRestaurant.Properties.Resources.salad2;
-            this.pictureBox5.Location = new System.Drawing.Point(48, 188);
+            this.pictureBox5.Location = new System.Drawing.Point(49, 228);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(44, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -455,7 +461,7 @@ namespace FastFoodRestaurant
             // SandwichCb
             // 
             this.SandwichCb.AutoSize = true;
-            this.SandwichCb.Location = new System.Drawing.Point(27, 327);
+            this.SandwichCb.Location = new System.Drawing.Point(28, 367);
             this.SandwichCb.Name = "SandwichCb";
             this.SandwichCb.Size = new System.Drawing.Size(15, 14);
             this.SandwichCb.TabIndex = 4;
@@ -466,7 +472,7 @@ namespace FastFoodRestaurant
             // 
             this.FriteTb.Enabled = false;
             this.FriteTb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FriteTb.Location = new System.Drawing.Point(216, 72);
+            this.FriteTb.Location = new System.Drawing.Point(217, 112);
             this.FriteTb.Name = "FriteTb";
             this.FriteTb.Size = new System.Drawing.Size(59, 32);
             this.FriteTb.TabIndex = 7;
@@ -476,7 +482,7 @@ namespace FastFoodRestaurant
             // PouletCb
             // 
             this.PouletCb.AutoSize = true;
-            this.PouletCb.Location = new System.Drawing.Point(27, 261);
+            this.PouletCb.Location = new System.Drawing.Point(28, 301);
             this.PouletCb.Name = "PouletCb";
             this.PouletCb.Size = new System.Drawing.Size(15, 14);
             this.PouletCb.TabIndex = 4;
@@ -486,7 +492,7 @@ namespace FastFoodRestaurant
             // pictureBox4
             // 
             this.pictureBox4.Image = global::FastFoodRestaurant.Properties.Resources.burger1;
-            this.pictureBox4.Location = new System.Drawing.Point(48, 130);
+            this.pictureBox4.Location = new System.Drawing.Point(49, 170);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(44, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -496,7 +502,7 @@ namespace FastFoodRestaurant
             // SaladeCb
             // 
             this.SaladeCb.AutoSize = true;
-            this.SaladeCb.Location = new System.Drawing.Point(27, 199);
+            this.SaladeCb.Location = new System.Drawing.Point(28, 239);
             this.SaladeCb.Name = "SaladeCb";
             this.SaladeCb.Size = new System.Drawing.Size(15, 14);
             this.SaladeCb.TabIndex = 4;
@@ -508,7 +514,7 @@ namespace FastFoodRestaurant
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(108, 72);
+            this.label4.Location = new System.Drawing.Point(109, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 22);
             this.label4.TabIndex = 6;
@@ -517,7 +523,7 @@ namespace FastFoodRestaurant
             // HamburgerCb
             // 
             this.HamburgerCb.AutoSize = true;
-            this.HamburgerCb.Location = new System.Drawing.Point(27, 141);
+            this.HamburgerCb.Location = new System.Drawing.Point(28, 181);
             this.HamburgerCb.Name = "HamburgerCb";
             this.HamburgerCb.Size = new System.Drawing.Size(15, 14);
             this.HamburgerCb.TabIndex = 4;
@@ -527,7 +533,7 @@ namespace FastFoodRestaurant
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FastFoodRestaurant.Properties.Resources.mc1;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(49, 109);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -537,7 +543,7 @@ namespace FastFoodRestaurant
             // FriteCb
             // 
             this.FriteCb.AutoSize = true;
-            this.FriteCb.Location = new System.Drawing.Point(27, 80);
+            this.FriteCb.Location = new System.Drawing.Point(28, 120);
             this.FriteCb.Name = "FriteCb";
             this.FriteCb.Size = new System.Drawing.Size(15, 14);
             this.FriteCb.TabIndex = 4;
@@ -547,11 +553,11 @@ namespace FastFoodRestaurant
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(57, 17);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gold;
+            this.label2.Location = new System.Drawing.Point(40, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 26);
+            this.label2.Size = new System.Drawing.Size(217, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Menu Fast Food";
             // 
@@ -616,11 +622,11 @@ namespace FastFoodRestaurant
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(42, 17);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gold;
+            this.label3.Location = new System.Drawing.Point(24, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 26);
+            this.label3.Size = new System.Drawing.Size(243, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Boisson Et Dessert";
             // 
@@ -972,6 +978,7 @@ namespace FastFoodRestaurant
             this.ReinitialiserBt.TabIndex = 7;
             this.ReinitialiserBt.Text = "RÉINITIALISER";
             this.ReinitialiserBt.UseVisualStyleBackColor = false;
+            this.ReinitialiserBt.Click += new System.EventHandler(this.ReinitialiserBt_Click);
             // 
             // ImprimerBt
             // 
@@ -987,6 +994,7 @@ namespace FastFoodRestaurant
             this.ImprimerBt.TabIndex = 7;
             this.ImprimerBt.Text = "IMPRIMER";
             this.ImprimerBt.UseVisualStyleBackColor = false;
+            this.ImprimerBt.Click += new System.EventHandler(this.ImprimerBt_Click);
             // 
             // AjouterBt
             // 
@@ -1082,7 +1090,42 @@ namespace FastFoodRestaurant
             this.RecetteTb.Size = new System.Drawing.Size(572, 368);
             this.RecetteTb.TabIndex = 5;
             this.RecetteTb.Text = "";
-            this.RecetteTb.TextChanged += new System.EventHandler(this.RecetteTb_TextChanged);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(43, 17);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(155, 22);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "Numéro de table :";
+            // 
+            // NumTabTb
+            // 
+            this.NumTabTb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumTabTb.Location = new System.Drawing.Point(217, 11);
+            this.NumTabTb.Name = "NumTabTb";
+            this.NumTabTb.Size = new System.Drawing.Size(59, 32);
+            this.NumTabTb.TabIndex = 9;
+            this.NumTabTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
             // FastFood
             // 
@@ -1214,6 +1257,10 @@ namespace FastFoodRestaurant
         private System.Windows.Forms.Button ImprimerBt;
         private System.Windows.Forms.RichTextBox RecetteTb;
         private System.Windows.Forms.Button CloseBt;
+        private System.Windows.Forms.TextBox NumTabTb;
+        private System.Windows.Forms.Label label23;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
 
